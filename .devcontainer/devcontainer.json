@@ -26,14 +26,5 @@
 	],
 	"workspaceFolder": "/workspace",
 	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
-	"postCreateCommand": "git config --global --add safe.directory /workspace",
-	"features": {
-	  "ghcr.io/devcontainers/features/desktop-lite:1": {}
-	},
-	"forwardPorts": [6080],
-	"portsAttributes": {
-	  "6080": {
-		"label": "desktop"
-	  }
-	}
+	"postCreateCommand": "git config --global --add safe.directory /workspace"
 }
