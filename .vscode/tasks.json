@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "build minitalk server",
+			"type": "shell",
+			"command": "make",
+			"args": ["build/server"],
+			"group": "build",
+			"problemMatcher": "$gcc"
+		},
+		{
+			"label": "build minitalk client",
+			"type": "shell",
+			"command": "make",
+			"args": ["build/client"],
+			"group": "build",
+			"problemMatcher": "$gcc"
+		}
+	]
+}

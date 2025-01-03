@@ -1,0 +1,66 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Minitalk Server Debug",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/build/server",
+			"args": [""],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"externalConsole": false,
+			"MIMode": "gdb",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				},
+				{
+					"description": "Ignore SIGUSR1",
+					"text": "handle SIGUSR1 nostop noprint",
+					"ignoreFailures": true
+				},
+				{
+					"description": "Ignore SIGUSR2",
+					"text": "handle SIGUSR2 nostop noprint",
+					"ignoreFailures": true
+				}
+			],
+			"preLaunchTask": "build minitalk server"
+		},
+		{
+			"name": "Minitalk Client Debug",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/build/client",
+			"args": ["2431851", "A"],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"externalConsole": false,
+			"MIMode": "gdb",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				},
+				{
+					"description": "Ignore SIGUSR1",
+					"text": "handle SIGUSR1 nostop noprint",
+					"ignoreFailures": true
+				},
+				{
+					"description": "Ignore SIGUSR2",
+					"text": "handle SIGUSR2 nostop noprint",
+					"ignoreFailures": true
+				}
+			],
+			"preLaunchTask": "build minitalk client"
+		}
+	]
+}
